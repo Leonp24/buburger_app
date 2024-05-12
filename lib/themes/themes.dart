@@ -12,6 +12,7 @@ Color greenColor = Color(0XFF26FF22);
 Color redColor = Color(0XFFD23030);
 Color whiteColor = Color(0XFFFFFFFF);
 Color bgColor = Color(0XFFF4F3EF);
+Color borderColor = Color(0XFFCDCDCD);
 
 // text
 TextStyle primaryTextstyle = GoogleFonts.outfit(
@@ -40,4 +41,7 @@ TextStyle splashTextstyle1 = GoogleFonts.slackey(
 );
 TextStyle splashTextstyle2 = GoogleFonts.slackey(
   color: secondaryColor
+);
+TextStyle borderTextstyle = GoogleFonts.outfit(
+  color: borderColor
 );
