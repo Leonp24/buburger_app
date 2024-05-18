@@ -10,7 +10,11 @@ class LandingPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       body: Container(
-        margin: EdgeInsets.only(left: 20, right: 20, top: 22,),
+        margin: EdgeInsets.only(
+          left: 20,
+          right: 20,
+          top: 22,
+        ),
         child: ListView(
           children: [
             // kolom search
@@ -40,51 +44,77 @@ class LandingPage extends StatelessWidget {
             // banner
             Stack(
               children: [
-                Image.asset("assets/img-banner.png", fit: BoxFit.cover, width: double.infinity,),
-
+                Image.asset(
+                  "assets/img-banner.png",
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                ),
                 Container(
-                  margin: EdgeInsets.only(left: 22,),
+                  margin: EdgeInsets.only(
+                    left: 22,
+                  ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(height: 29,),
-                      Text("KHUSUS PENGGUNA BARU", style: secondaryTextstyle.copyWith(
-                        fontSize: 10,
-                      ),),
-                      SizedBox(height: 6,),
-                      Text("Dapetin 1 Burger\nbayar dengan COD!", style: blackTextstyle.copyWith(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),),
-
-                      SizedBox(height: 10,),
-
+                      SizedBox(
+                        height: 29,
+                      ),
+                      Text(
+                        "KHUSUS PENGGUNA BARU",
+                        style: secondaryTextstyle.copyWith(
+                          fontSize: 10,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6,
+                      ),
+                      Text(
+                        "Dapetin 1 Burger\nbayar dengan COD!",
+                        style: blackTextstyle.copyWith(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
                       TextButton(
                         style: TextButton.styleFrom(
                           backgroundColor: secondaryColor,
                         ),
-                        onPressed: null, 
+                        onPressed: null,
                         child: Padding(
-                          padding: const EdgeInsets.only(top: 5, bottom: 5, left: 10, right: 10),
-                          child: Text("Beli Sekarang!", style: whiteTextstyle.copyWith(
-                            fontWeight: FontWeight.w600,
-                          ),),
+                          padding: const EdgeInsets.only(
+                              top: 5, bottom: 5, left: 10, right: 10),
+                          child: Text(
+                            "Beli Sekarang!",
+                            style: whiteTextstyle.copyWith(
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
                         ),
-                        ),
+                      ),
                     ],
                   ),
                 ),
               ],
             ),
 
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
 
             // Text
-            Text("Mungkin kamu suka!", style: blackTextstyle.copyWith(
-              fontWeight: FontWeight.w600,
-            ),),
+            Text(
+              "Mungkin kamu suka!",
+              style: blackTextstyle.copyWith(
+                fontWeight: FontWeight.w600,
+              ),
+            ),
 
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
 
             // list product
             Container(
@@ -121,8 +151,6 @@ class LandingPage extends StatelessWidget {
                 ],
               ),
             ),
-
-
           ],
         ),
       ),
