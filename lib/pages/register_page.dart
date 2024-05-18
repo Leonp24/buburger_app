@@ -24,7 +24,7 @@ class RegisterPage extends StatelessWidget {
             Text("Buat akun untuk mulai pesan.", style: greyTextstyle,),
 
             SizedBox(
-              height: 20,
+              height: 30,
             ),
 
             Text(
