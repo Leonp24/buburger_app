@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-// buat variabel yang digunakan dalam format desain
+// buat variabel2 yg akan dipakai dalam format desain
 
 // warna
 Color primaryColor = Color(0XFFFFD422);
@@ -11,8 +11,8 @@ Color greyColor = Color(0XFF828282);
 Color greenColor = Color(0XFF26FF22);
 Color redColor = Color(0XFFD23030);
 Color whiteColor = Color(0XFFFFFFFF);
-Color bgColor = Color(0XFFF4F3EF);
-Color borderColor = Color(0XFFCDCDCD);
+Color bgColor = Color(0XFFFF4F3EF);
+Color borderColor = Color(0XFFFCDCDCD);
 
 // text
 TextStyle primaryTextstyle = GoogleFonts.outfit(
@@ -36,12 +36,12 @@ TextStyle redTextstyle = GoogleFonts.outfit(
 TextStyle whiteTextstyle = GoogleFonts.outfit(
   color: whiteColor
 );
+TextStyle borderTextstyle = GoogleFonts.outfit(
+  color: borderColor
+);
 TextStyle splashTextstyle1 = GoogleFonts.slackey(
   color: blackColor
 );
 TextStyle splashTextstyle2 = GoogleFonts.slackey(
   color: secondaryColor
-);
-TextStyle borderTextstyle = GoogleFonts.outfit(
-  color: borderColor
 );

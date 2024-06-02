@@ -2,7 +2,7 @@ import 'package:buburger_app/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetail extends StatefulWidget {
-  ProductDetail({super.key, required this.nama, required this.imageUrl, required this.harga});
+  ProductDetail({super.key, required this.nama, required this.imageUrl, required this.harga });
 
   String nama, imageUrl, harga;
 
@@ -33,12 +33,8 @@ class _ProductDetailState extends State<ProductDetail> {
           ),
         ),
       ),
-
       body: Container(
-        margin: EdgeInsets.only(
-          left: 20,
-          right: 20,
-        ),
+        margin: EdgeInsets.only(left: 20, right: 20),
         child: ListView(
           children: [
             Image.asset(
@@ -62,13 +58,12 @@ class _ProductDetailState extends State<ProductDetail> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    SizedBox(
-                      height: 6,
-                    ),
                     Text(
                       widget.harga,
-                      style: greyTextstyle,
-                    )
+                      style: greyTextstyle.copyWith(
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ],
                 ),
                 Row(
@@ -94,42 +89,31 @@ class _ProductDetailState extends State<ProductDetail> {
                 ),
               ],
             ),
-            SizedBox(
+            // Detail
+             SizedBox(
               height: 20,
             ),
-            Text(
-              "Detail",
-              style: blackTextstyle.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(
-              height: 3,
-            ),
-            Text(
-              "Burger daging yang rendah lemak, dilengkapi dengan keju,seledri, dan potongan bawang bombai yang lezat.",
-              style: greyTextstyle,
-            ),
-            SizedBox(
+            Text("Detail", style: blackTextstyle.copyWith(
+              fontWeight: FontWeight.w600,
+            ), ) ,
+            Text("Burger daging yang rendah lemak, dilengkapi dengan keju,seledri, dan potongan bawang bombai yang lezat.", style: greyTextstyle.copyWith(
+              fontWeight: FontWeight.w600,
+            ), ) ,
+            
+            // Komposisi
+             SizedBox(
               height: 20,
             ),
-            Text(
-              "Komposisi",
-              style: blackTextstyle.copyWith(
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            SizedBox(
-              height: 3,
-            ),
-            Text(
-              "Roti, seledri, wijen, bawang bombai, daging sapi, keju.",
-              style: greyTextstyle,
-            ),
+            Text("Komposisi", style: blackTextstyle.copyWith(
+              fontWeight: FontWeight.w600,
+            ), ) ,
+            Text("Roti, seledri, wijen, bawang bombai, daging sapi, keju..", style: greyTextstyle.copyWith(
+              fontWeight: FontWeight.w600,
+            ), ) ,
+
           ],
         ),
       ),
-
       // BottomNavigation
       bottomNavigationBar: Container(
         width: double.infinity,
@@ -141,32 +125,32 @@ class _ProductDetailState extends State<ProductDetail> {
             // keranjang
             Container(
               width: 150,
-              height: 45,
+              height: 42,
               child: TextButton(
-                style: TextButton.styleFrom(
-                  backgroundColor: primaryColor,
-                ),
+                style: TextButton.styleFrom(backgroundColor: primaryColor),
                 onPressed: null,
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      top: 5, bottom: 5, left: 10, right: 10),
+                    top: 5,
+                    bottom: 5,
+                    left: 19,
+                    right: 19,
+                  ),
                   child: Text(
                     "+ Keranjang",
-                    style: blackTextstyle.copyWith(
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: blackTextstyle,
                   ),
                 ),
               ),
             ),
 
-            // pesan sekarang
+            // Pesan Sekarang
             Container(
               width: 150,
-              height: 45,
+              height: 42,
               decoration: BoxDecoration(
-                border: Border.all(color: secondaryColor),
                 borderRadius: BorderRadius.circular(5),
+                border: Border.all(color: redColor, width: 2 ),
               ),
               child: Center(child: Text("Pesan Sekarang", style: secondaryTextstyle,)),
             ),

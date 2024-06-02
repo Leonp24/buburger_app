@@ -14,19 +14,19 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
 
-  // memanggil function yang akan dijalankan saat halaman ini dipanggil
+  // memanggil function ap yg akan dijalankan saat halaman ini dipanggil
   void initState() {
     // TODO: implement initState
     super.initState();
     movingPage();
   }
 
-  // function setelah 2 detik akan pindah halaman
+  //fungsi setelah 2 detik akan berpindah halaman  
   void movingPage() {
     Timer(Duration(seconds: 2), () {
-      // masukkan fungsi navigasi
+      // masukkan fungsi navigation
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (contect) => LoginPage()));
+          context, MaterialPageRoute(builder: (context) => LoginPage()));
     });
   }
 
@@ -37,35 +37,30 @@ class _SplashPageState extends State<SplashPage> {
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              height: 35,
-            ),
-            // baris ke 1
+            // baris ke-1
             Container(
-              margin: EdgeInsets.only(left: 20),
-              child: Row(children: [
-                Image.asset(
-                  "assets/ic-logo.png",
-                  width: 30,
-                ),
-                SizedBox(
-                  width: 9,
-                ),
-                Text(
-                  "Buburger",
-                  style: splashTextstyle1.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
+              margin: EdgeInsets.only(
+                  left: 20, top: MediaQuery.of(context).size.height * 0.05),
+              child: Row(
+                children: [
+                  Image.asset("assets/image1.png"),
+                  SizedBox(
+                    width: 9,
                   ),
-                ),
-              ]),
+                  Text(
+                    "Buburger",
+                    style: splashTextstyle1.copyWith(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
             ),
-
             SizedBox(
               height: 20,
             ),
-
-            // baris ke 2
+            // baris ke-2
             Container(
               margin: EdgeInsets.only(left: 20),
               child: Column(
@@ -89,9 +84,8 @@ class _SplashPageState extends State<SplashPage> {
               ),
             ),
 
-            // baris ke 3
             Spacer(),
-
+            // baris ke-3
             Image.asset(
               "assets/img-splash.png",
               width: double.infinity,

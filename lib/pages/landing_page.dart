@@ -32,8 +32,8 @@ class LandingPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(5),
                   borderSide: BorderSide(color: borderColor),
                 ),
-                hintText: "Cari Burger Favoritmu ...",
-                hintStyle: borderTextstyle,
+                hintText: "Cari burger favoritmu...",
+                hintStyle: greyTextstyle,
               ),
             ),
 
@@ -50,9 +50,7 @@ class LandingPage extends StatelessWidget {
                   width: double.infinity,
                 ),
                 Container(
-                  margin: EdgeInsets.only(
-                    left: 22,
-                  ),
+                  margin: EdgeInsets.only(left: 22),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -60,7 +58,7 @@ class LandingPage extends StatelessWidget {
                         height: 29,
                       ),
                       Text(
-                        "KHUSUS PENGGUNA BARU",
+                        "KHUSUS PENGGUNA BARU!",
                         style: secondaryTextstyle.copyWith(
                           fontSize: 10,
                         ),
@@ -80,17 +78,18 @@ class LandingPage extends StatelessWidget {
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
-                          backgroundColor: secondaryColor,
-                        ),
+                            backgroundColor: secondaryColor),
                         onPressed: null,
                         child: Padding(
                           padding: const EdgeInsets.only(
-                              top: 5, bottom: 5, left: 10, right: 10),
+                            top: 5,
+                            bottom: 5,
+                            left: 19,
+                            right: 19,
+                          ),
                           child: Text(
                             "Beli Sekarang!",
-                            style: whiteTextstyle.copyWith(
-                              fontWeight: FontWeight.w600,
-                            ),
+                            style: whiteTextstyle,
                           ),
                         ),
                       ),
@@ -104,30 +103,27 @@ class LandingPage extends StatelessWidget {
               height: 20,
             ),
 
-            // Text
+            // text
             Text(
               "Mungkin kamu suka!",
               style: blackTextstyle.copyWith(
                 fontWeight: FontWeight.w600,
               ),
             ),
-
             SizedBox(
               height: 20,
             ),
-
             // list product
             Container(
               margin: EdgeInsets.only(bottom: 20),
               child: GridView.count(
                 crossAxisCount: 2,
                 shrinkWrap: true,
-                crossAxisSpacing: 20,
-                childAspectRatio: 5 / 6.5,
-                mainAxisSpacing: 20,
+                crossAxisSpacing: 12,
+                childAspectRatio: 5 / 7,
+                mainAxisSpacing: 12,
                 physics: NeverScrollableScrollPhysics(),
                 children: [
-                  // ProductCard,
                   ProductWidget(
                     nama: "Beef Burger",
                     imageUrl: "assets/burger1.png",
@@ -138,7 +134,7 @@ class LandingPage extends StatelessWidget {
                     imageUrl: "assets/burger2.png",
                     harga: "IDR 15.000",
                   ),
-                  ProductWidget(
+                ProductWidget(
                     nama: "Union Burger",
                     imageUrl: "assets/burger3.png",
                     harga: "IDR 10.000",
